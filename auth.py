@@ -49,7 +49,8 @@ def passw_auth(message):
                     connection.commit()
                     cursor.execute(f"SELECT `namecompany` FROM `companys` WHERE `companyId`='{result[0]}'")
                     result2 = cursor.fetchone()
-                    main_page(message.chat.id, f"Вы успешно вошли в компанию {result2[0]}.")
+                    main_page(message.chat.id, f"Вы успешно вошли в компанию {result2[0]}.\n\n"
+                                               f"Сейчас ничего нет. Ждём новую заявку)")
                     print('Пользователь вошёл в систему')
                     print('#' * 20)
         finally:

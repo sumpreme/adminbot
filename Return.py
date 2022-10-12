@@ -91,4 +91,4 @@ def main_page(id, mes):
             # markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
             # markup.add(but1, but2, but_applications)
             # bot.send_message(id, f"{mes}", parse_mode="html", reply_markup=markup)
-            bot.send_message(id, "Сейчас ничего нет. Ждём новую заявку", reply_markup=types.ReplyKeyboardRemove())
+            bot.send_message(id, mes, parse_mode="html", reply_markup=types.ReplyKeyboardRemove())
