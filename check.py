@@ -13,8 +13,7 @@ def check(id):
             database=bd_name,
             # cursorclass=pymysql.cursors.DictCursor
         )
-        print("successfullu connectid...")
-        print("#" * 20)
+
         try:
             with connection.cursor() as cursor:
                 cursor.execute(f"SELECT * FROM `users` WHERE `chatId`='{id}'")
