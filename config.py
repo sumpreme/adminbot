@@ -1,10 +1,10 @@
 from aiogram import Bot, Dispatcher, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-host = "31.31.196.38"
-user = "u1721556_admin"
+host = "37.140.192.240"
+user = "u1843020_admin"
 password = "Lapik2022."
-bd_name = "u1721556_telegrambot"
+bd_name = "u1843020_telegrambot"
 # host = "37.140.192.240"
 # user = "admin"
 # password = "admin1234"
