@@ -2,7 +2,6 @@ import asyncio
 import time
 import pymysql
 from config import *
-from payment import returnTerm
 
 
 def checkbd():
@@ -117,12 +116,11 @@ def checkbd():
                     result = cursor.fetchall()
                     if result != ():
                         for i in range(len(result)):
-                            if returnTerm(result[i][0]) > time.time():
-                                if (result[i][7] - time.time()) < 86400:
-                                    cursor.execute(f"SELECT `notify_pay` FROM `companys` WHERE `id`='{result[0]}'")
-                                    notifyResult = cursor.fetchone()
-                                    if notifyResult[0] == 0:
-                                        SendNotifyPay(result[i][0])
+                            cursor.execute(f"SELECT `notify_pay`, `term` FROM `companys` WHERE `companyId`='{result[i][0]}'")
+                            notifyResult = cursor.fetchone()
+                            if notifyResult[1] > time.time():
+                                if (notifyResult[1] - time.time()) < 86400 and notifyResult[0] == 0:
+                                    SendNotifyPay(result[i][0])
                                 if result[i][3] == "true":
                                     k = "написать"
                                 else:
