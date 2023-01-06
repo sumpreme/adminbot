@@ -16,8 +16,8 @@ user = "u1843020_admin"
 password = "Lapik2022."
 bd_name = "u1843020_telegrambot"
 # ...............................
-# token = "5626641804:AAF_SpZqEP249cBoy1w8vpIJHZRXi9NOqgs"
-token = "5471405708:AAEw83oAsPHAxbEnIxEyG5oWwjjDf4rjqSs"
+token = "5626641804:AAF_SpZqEP249cBoy1w8vpIJHZRXi9NOqgs"
+#token = "5471405708:AAEw83oAsPHAxbEnIxEyG5oWwjjDf4rjqSs"
 
 # Оплата подписки
 PRICE = types.LabeledPrice(label="Подписка на 30 дней", amount=99 * 100)  # в копейках (руб)
