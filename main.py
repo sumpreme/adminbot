@@ -4,7 +4,8 @@ from commands import startc, helpc, mycompanyc, settingc, bot_messagec
 from Return import main_page
 from Check_Bd import checkbd
 from aiogram import executor
-from payment import *
+from yookassaPayment import *
+#from payment import *
 from aiogram.types.message import ContentType
 
 def mainik():
@@ -43,14 +44,14 @@ def mainik():
         await bot_messagec(message)
 
 
-    @dp.pre_checkout_query_handler(lambda query: True)
-    async def pre_checkout_queryp(pre_checkout_q: types.PreCheckoutQuery):
-        await bot.answer_pre_checkout_query(pre_checkout_q.id, ok=True)
-
-
-    @dp.message_handler(content_types=ContentType.SUCCESSFUL_PAYMENT)
-    async def successful_payment(message):
-        await successful_paymentp(message)
+    # @dp.pre_checkout_query_handler(lambda query: True)
+    # async def pre_checkout_queryp(pre_checkout_q: types.PreCheckoutQuery):
+    #     await bot.answer_pre_checkout_query(pre_checkout_q.id, ok=True)
+    #
+    #
+    # @dp.message_handler(content_types=ContentType.SUCCESSFUL_PAYMENT)
+    # async def successful_payment(message):
+    #     await successful_paymentp(message)
 
     executor.start_polling(dp, skip_updates=False)
 

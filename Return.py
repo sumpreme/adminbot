@@ -19,7 +19,6 @@ def company_id(chatid):
             database=bd_name,
             # cursorclass=pymysql.cursors.DictCursor
         )
-
         try:
             with connection.cursor() as cursor:
                 cursor.execute(f"SELECT `companyId` FROM `users` WHERE `chatId`='{chatid}'")
@@ -43,7 +42,6 @@ def name_company(id):
             database=bd_name,
             # cursorclass=pymysql.cursors.DictCursor
         )
-
         try:
             with connection.cursor() as cursor:
                 cursor.execute(f"SELECT `namecompany` FROM `companys` WHERE `companyId`='{id}'")
@@ -75,6 +73,29 @@ def number_status(id):
                 return result[0]
         finally:
             connection.close()
+    except Exception as ex:
+        print("Connection refused…")
+        print(ex)
+
+# ----- По id компании возвращает конец подписки -----
+def returnTerm(idCompany):
+    try:
+        connection = pymysql.connect(
+            host=host,
+            port=3306,
+            user=user,
+            password=password,
+            database=bd_name,
+            # cursorclass=pymysql.cursors.DictCursor
+        )
+        try:
+            with connection.cursor() as cursor:
+                cursor.execute(
+                    f"SELECT `term` FROM `companys` WHERE `companyId` = '{idCompany}'")
+                result = cursor.fetchone()
+        finally:
+            connection.close()
+            return result[0]
     except Exception as ex:
         print("Connection refused…")
         print(ex)

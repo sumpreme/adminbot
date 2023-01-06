@@ -9,7 +9,8 @@ from aiogram.dispatcher.filters.state import StatesGroup, State
 from aiogram.dispatcher import FSMContext
 
 from auth import Auth
-from payment import buyp1
+from yookassaPayment import buyp1
+#from payment import buyp1
 
 
 # ----- /start -----

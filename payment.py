@@ -1,5 +1,5 @@
 import pymysql
-from Return import company_id
+from Return import company_id, returnTerm
 from config import *
 import time
 
@@ -68,31 +68,6 @@ async def successful_paymentp(message: types.Message):
     await bot.send_message(message.chat.id, f"Вы успешно приобрели подписку на {paymenAmount // 86400} дней.")
 
 
-
-def returnTerm(idCompany):
-    try:
-        connection = pymysql.connect(
-            host=host,
-            port=3306,
-            user=user,
-            password=password,
-            database=bd_name,
-            # cursorclass=pymysql.cursors.DictCursor
-        )
-
-        try:
-            with connection.cursor() as cursor:
-                cursor.execute(
-                    f"SELECT `term` FROM `companys` WHERE `companyId` = '{idCompany}'")
-                result = cursor.fetchone()
-        finally:
-            connection.close()
-            return result[0]
-    except Exception as ex:
-        print("Connection refused…")
-        print(ex)
-
-
 def Temp(newTemp, id):
     try:
         connection = pymysql.connect(
@@ -103,7 +78,6 @@ def Temp(newTemp, id):
             database=bd_name,
             # cursorclass=pymysql.cursors.DictCursor
         )
-
         try:
             with connection.cursor() as cursor:
                 cursor.execute(
