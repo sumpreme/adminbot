@@ -13,7 +13,7 @@ from yookassa import Configuration
 # ........... Основа ............
 host = "localhost"
 user = "root"
-password = "3zPydXsnnihjbS3S"
+password = "9b82dd96fe5d8a84"
 bd_name = "telegram"
 # ...............................
 token = "5626641804:AAF_SpZqEP249cBoy1w8vpIJHZRXi9NOqgs"
