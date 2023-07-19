@@ -124,7 +124,7 @@ def Temp(newTemp, id):
     try:
         connection = pymysql.connect(
             host=host,
-            port=3306,
+            port=888,
             user=user,
             password=password,
             database=bd_name,
