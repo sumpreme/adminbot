@@ -13,7 +13,7 @@ def company_id(chatid):
     try:
         connection = pymysql.connect(
             host=host,
-            port=3306,
+            port=888,
             user=user,
             password=password,
             database=bd_name,
@@ -36,7 +36,7 @@ def name_company(id):
     try:
         connection = pymysql.connect(
             host=host,
-            port=3306,
+            port=888,
             user=user,
             password=password,
             database=bd_name,
@@ -59,7 +59,7 @@ def number_status(id):
     try:
         connection = pymysql.connect(
             host=host,
-            port=3306,
+            port=888,
             user=user,
             password=password,
             database=bd_name,
@@ -82,7 +82,7 @@ def returnTerm(idCompany):
     try:
         connection = pymysql.connect(
             host=host,
-            port=3306,
+            port=888,
             user=user,
             password=password,
             database=bd_name,
