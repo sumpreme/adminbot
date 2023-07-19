@@ -11,10 +11,10 @@ from yookassa import Configuration
 # password = "admin1234"
 # bd_name = "u1843020_telegrambot"
 # ........... Основа ............
-host = "37.140.192.240"
-user = "u1843020_admin"
-password = "Lapik2022."
-bd_name = "u1843020_telegrambot"
+host = "78.140.240.187"
+user = "root"
+password = "9b82dd96fe5d8a84"
+bd_name = "telegram"
 # ...............................
 token = "5626641804:AAF_SpZqEP249cBoy1w8vpIJHZRXi9NOqgs"
 #token = "5471405708:AAEw83oAsPHAxbEnIxEyG5oWwjjDf4rjqSs"
