@@ -15,7 +15,7 @@ async def SendMessage(message):
     try:
         connection = pymysql.connect(
             host=host,
-            port=3306,
+            port=888,
             user=user,
             password=password,
             database=bd_name,
@@ -52,7 +52,7 @@ async def SendMessage_next1(message: types.Message, state: FSMContext):
         try:
             connection = pymysql.connect(
                 host=host,
-                port=3306,
+                port=888,
                 user=user,
                 password=password,
                 database=bd_name,
@@ -114,7 +114,7 @@ async def SendMessage_next3(message: types.Message, state: FSMContext):
             try:
                 connection = pymysql.connect(
                     host=host,
-                    port=3306,
+                    port=888,
                     user=user,
                     password=password,
                     database=bd_name,
@@ -139,7 +139,7 @@ async def SendMessage_next3(message: types.Message, state: FSMContext):
             try:
                 connection = pymysql.connect(
                     host=host,
-                    port=3306,
+                    port=888,
                     user=user,
                     password=password,
                     database=bd_name,
