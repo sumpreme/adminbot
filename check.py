@@ -7,7 +7,7 @@ def check(id):
     try:
         connection = pymysql.connect(
             host=host,
-            port=888,
+            port=3306,
             user=user,
             password=password,
             database=bd_name,

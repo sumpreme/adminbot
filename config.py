@@ -11,9 +11,9 @@ from yookassa import Configuration
 # password = "admin1234"
 # bd_name = "u1843020_telegrambot"
 # ........... Основа ............
-host = "localhost"
+host = "93.183.75.36"
 user = "root"
-password = "9b82dd96fe5d8a84"
+password = "Lapik2023."
 bd_name = "telegram"
 # ...............................
 token = "5626641804:AAF_SpZqEP249cBoy1w8vpIJHZRXi9NOqgs"

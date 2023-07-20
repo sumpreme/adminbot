@@ -10,7 +10,7 @@ def checkbd():
         try:
             connection = pymysql.connect(
                 host=host,
-                port=888,
+                port=3306,
                 user=user,
                 password=password,
                 database=bd_name,
@@ -34,7 +34,7 @@ def checkbd():
                             try:
                                 connection = pymysql.connect(
                                     host=host1,
-                                    port=888,
+                                    port=3306,
                                     user=user1,
                                     password=password1,
                                     database=name,
@@ -65,7 +65,7 @@ def checkbd():
         try:
             connection = pymysql.connect(
                 host=host,
-                port=888,
+                port=3306,
                 user=user,
                 password=password,
                 database=name,
@@ -104,7 +104,7 @@ def checkbd():
         try:
             connection = pymysql.connect(
                 host=host,
-                port=888,
+                port=3306,
                 user=user,
                 password=password,
                 database=bd_name,
@@ -141,7 +141,7 @@ def checkbd():
         try:
             connection = pymysql.connect(
                 host=host,
-                port=888,
+                port=3306,
                 user=user,
                 password=password,
                 database=bd_name,
@@ -169,7 +169,7 @@ def SendNotifyPay(id):
     try:
         connection = pymysql.connect(
             host=host,
-            port=888,
+            port=3306,
             user=user,
             password=password,
             database=bd_name,
